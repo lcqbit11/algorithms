@@ -63,4 +63,4 @@ if __name__ == "__main__":
     # res = []
     # binary_tree_pre_order_traversal1(root, res)
     # print(res)
-    print(binary_tree_pre_order_traversal(root))
+    print(binary_tree_pre_order_traversal2(root))

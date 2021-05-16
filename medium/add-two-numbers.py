@@ -6,7 +6,7 @@ from lib.listNode import ListNode
 
 def add_two_numbers(l1, l2):
     """
-    给定两个链表，分别表示非负整数，且每个整数在链表中都是倒序存储，计算两个整数的和，
+    给定两个链表，分别表示非负整数，且每个整数在链表中都是倒序存储，即低位数字在前，计算两个整数的和，
     并将他们按照倒叙存储到一个链表中
     example:
     Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
@@ -27,27 +27,32 @@ def add_two_numbers(l1, l2):
     upBit = 0
     while p.next and q.next:
         tmp = (p.next.val + q.next.val + upBit) % 10
-        upBit = (p.next.val + q.next.val + upBit) / 10
-        p = p.next
-        q = q.next
+        upBit = (p.next.val + q.next.val + upBit) // 10
         nextNode = ListNode(tmp)
         res.next = nextNode
         res = res.next
+        p = p.next
+        q = q.next
 
     k = p.next or q.next
 
     while k:
         tmp = (k.val + upBit) % 10
-        upBit = (k.val + upBit) / 10
-        k = k.next
+        upBit = (k.val + upBit) // 10
         nextNode = ListNode(tmp)
         res.next = nextNode
         res = res.next
+        k = k.next
 
     if upBit:
         res.next = ListNode(upBit)
 
-    return dumpy.next
+    output = []
+    while dumpy.next:
+        output.append(int(dumpy.next.val))
+        dumpy = dumpy.next
+
+    return output
 
 
 if __name__ == '__main__':
@@ -70,9 +75,9 @@ if __name__ == '__main__':
     node31.next = None
 
     resLink = add_two_numbers(head, head1)
-    res = ''
-    while resLink:
-        res = res + str(int(resLink.val))
-        resLink = resLink.next
+    # res = ''
+    # while resLink:
+    #     res = res + str(int(resLink.val))
+    #     resLink = resLink.next
 
-    print(res)
+    print(resLink)

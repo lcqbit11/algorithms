@@ -8,6 +8,9 @@ from collections import deque
 def binary_tree_level_order_traversal(root):
     """
     层序遍历二叉树。
+    先遍历第一层从左向右遍历，
+    再遍历第二层从左向右遍历，
+    在遍历第三层从左向右遍历，，，一直到最后一层从左向右遍历。
     :param root: TreeNode(int)
     :return: List[List[int]]
     """
@@ -75,10 +78,15 @@ def binary_tree_level_order_traversal2(root):
 
 
 if __name__ == "__main__":
+    """
+            1
+        4       2
+    3       6
+    """
     root = TreeNode(1)
     root.left = layer2_left = TreeNode(4)
     root.right = layer2_right = TreeNode(2)
     layer2_left.left = TreeNode(3)
     layer2_left.right = TreeNode(6)
 
-    print(binary_tree_level_order_traversal2(root))
+    print(binary_tree_level_order_traversal(root))

@@ -5,7 +5,8 @@ from lib.listNode import ListNode, show_list_node
 
 def add_two_numbers_ii(l1, l2):
     """
-    给定两个非空的链表表示两个非负整数，并且高位数字在前，请将两个整数加起来，并用链表返回其和。
+    给定两个非空的链表表示两个非负整数，并且高位数字在前，请将两个整数加起来，
+    并用链表返回其和，返回结果中也是高位数字在前。
     :param l1: ListNode(int)
     :param l2: ListNode(int)
     :return: ListNode(int)

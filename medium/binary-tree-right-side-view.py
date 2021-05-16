@@ -75,6 +75,11 @@ def binary_tree_right_side_view2(root):
 
 
 if __name__ == "__main__":
+    """
+            1
+        4       2
+    3       6
+    """
     root = TreeNode(1)
     root.left = layer2_left = TreeNode(4)
     root.right = layer2_right = TreeNode(2)
