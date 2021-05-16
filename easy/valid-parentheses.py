@@ -5,8 +5,8 @@
 def isValid(s):
     """
     字符串里面只包含'(', ')', '{', '}', '[', ']'这6个字符，判断该字符是否是合理的
-    :param s:
-    :return bool:
+    :param s: str
+    :return bool: bool
     """
     stack = []
     res = ["()", "[]", "{}"]
