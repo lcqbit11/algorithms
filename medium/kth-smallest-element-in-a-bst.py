@@ -6,8 +6,8 @@ from lib.treeNode import TreeNode
 
 def kth_smallest_element_in_a_bst(root, k):
     """
-    给定一个搜索二叉树，请返回树中第k小的元素。
-    :param root: TreeNode(float)
+    ，请返回树中第k小的元素。
+    :给定一个搜索二叉树param root: TreeNode(float)
     :return: float
     """
     # nums = []

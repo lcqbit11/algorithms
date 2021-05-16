@@ -9,15 +9,15 @@ def jump_game(nums):
     :param nums: List[int]
     :return: bool
     """
-    maxLoc = 0
+    maxLoc = 0  # 当前能到达的最大位置下标
     for i in range(len(nums)):
-        if maxLoc < i:
+        if maxLoc < i:  # 历史能到达的最大位置小于当前的位置
             return False
         maxLoc = max(maxLoc, i + nums[i])
     return True
 
 
 if __name__ == "__main__":
-    # nums = [3,2,1,0,4]
-    nums = [3,2,1,2,4]
+    nums = [3,2,1,0,4]
+    # nums = [3,2,1,2,4]
     print(jump_game(nums))

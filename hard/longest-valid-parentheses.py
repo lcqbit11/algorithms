@@ -11,7 +11,7 @@ def longest_valid_parentheses(s):
     res = 0
     s = ')' + s
     # dp的每一个位置上的值表示截止到当前位置，有效括号的最大长度，
-    # 但是如果dp的当前位置不属于有效括号的范围内，则对应的dp位置值等于0
+    # 但是如果dp的当前位置不属于有效括号的范围内，则对应的dp位置上的值等于0
     dp = [0] * len(s)
     for i in range(1, len(s)):
         if s[i] == ')':
@@ -51,7 +51,8 @@ def longest_valid_parentheses2(s):
             left = right = 0
 
     left = right = 0
-    for i in reversed(range(len(s))):
+    # for i in reversed(range(len(s))):
+    for i in range(len(s)-1, -1, -1):
         if s[i] == '(':
             left += 1
         else:
@@ -67,5 +68,5 @@ def longest_valid_parentheses2(s):
 if __name__ == "__main__":
     s = '())((()))('
     s1 = '(()'
-    print(longest_valid_parentheses2(s1))
-    # print(longest_valid_parentheses(s))
+    # print(longest_valid_parentheses2(s1))
+    print(longest_valid_parentheses(s))
