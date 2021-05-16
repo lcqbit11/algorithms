@@ -10,6 +10,10 @@ def longest_consecutive(nums):
     """
     if not nums:
         return 0
+    # 将数组中的元素作为key，建立一个map结构，默认value为False
+    # 遍历数组中元素值，对当前值先向数值增加方向累计连续值元素，再向数值减小
+    # 方向累计连续值元素，那么连续值长度为数值增加方向的连续值长度+数值减小方向的
+    # 连续值长度+当前元素长度1
     d = {x: False for x in nums}
     max_len = -1
     for i in d:

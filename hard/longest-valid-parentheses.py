@@ -40,6 +40,10 @@ def longest_valid_parentheses1(s):
 def longest_valid_parentheses2(s):
     res = 0
     left = right = 0
+    # 从左向右遍历字符串，碰见'('和')'时分别给不同的变量left和right加1即可，
+    # 知道碰到这两个的变量值相同，可以得到截止当前最大的有效括号长度，
+    # 但是当')'数量大于'('数量时，则将变量left和right均赋值为0，重复遍历过程。
+    # 然后从右向左遍历字符串，重复上述的过程即可。然后对比两个过程各自得出的最大长度即可。
     for i in range(len(s)):
         if s[i] == '(':
             left += 1
