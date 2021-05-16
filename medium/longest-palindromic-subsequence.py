@@ -43,6 +43,37 @@ def longest_palindromic_subsequence1(s):  # 会超时
     return dp[0][l-1]
 
 
+def longest_palindromic_subsequence2(s):
+    res = ''
+    max_l = 0
+    index = 0
+    ll = len(s)
+    for i in range(ll):
+        # odd
+        j = 0
+        while i-j >= 0 and i+j < ll:
+            if s[i-j] == s[i+j]:
+                if max_l < 2*j+1:
+                    max_l = 2*j+1
+                    index = i
+                    res = s[(i-j):(i+j+1)]
+                j += 1
+            else:
+                break
+        # even
+        j = 0
+        while i-j >= 0 and i+1+j < ll:
+            if s[i-j] == s[i+1+j]:
+                if max_l < 2*(j+1):
+                    max_l = 2*(j+1)
+                    index = i
+                    res = s[(i-j):(i+1+j+1)]
+                j += 1
+            else:
+                break
+    return res
+
+
 if __name__ == "__main__":
     s = "bbbab"
-    print(longest_palindromic_subsequence1(s))
+    print(longest_palindromic_subsequence2(s))
