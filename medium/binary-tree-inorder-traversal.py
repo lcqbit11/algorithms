@@ -5,6 +5,15 @@ from lib.treeNode import TreeNode
 
 
 def tree_in_order_traversal2(root):
+    """
+    二叉树的中（根）序遍历。
+    三种遍历方式是指访问根节点的顺序，
+    前序遍历是指前面访问根节点，
+    中序遍历是指中间访问根节点，
+    后序遍历是指后面访问根节点。
+    :param root: TreeNode
+    :return: List
+    """
     res = []
     s = []
     while root or s:
@@ -73,4 +82,4 @@ if __name__ == "__main__":
     # res = []
     # tree_in_order_traversal1(root, res)
     # print(res)
-    print(tree_in_order_traversal(root))
+    print(tree_in_order_traversal2(root))
