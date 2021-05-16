@@ -7,7 +7,7 @@ from lib.treeNode import TreeNode
 def kth_smallest_element_in_a_bst(root, k):
     """
     ，请返回树中第k小的元素。
-    :给定一个搜索二叉树param root: TreeNode(float)
+    :给定一个搜索二叉树root: TreeNode(float)
     :return: float
     """
     # nums = []
@@ -52,6 +52,7 @@ def kth_smallest_element_in_a_bst1(root, k):
         return None
     s = []
     index = 0
+    # 按照二叉树中序遍历方式遍历到第k个节点对应的值即为第k小的元素
     while root or s:
         while root:
             s.append(root)
