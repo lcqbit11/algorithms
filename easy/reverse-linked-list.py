@@ -24,9 +24,11 @@ def reverse_linked_list(head):
 def reverse_linked_list1(head):
     if not head:
         return
-    dumpy = ListNode(-1)
-    dumpy.next = head
-    pre = dumpy
+    # dumpy = ListNode(-1)
+    # dumpy.next = head
+    # pre = dumpy
+    pre = ListNode(-1)
+    pre.next = head
     cur = head
     while cur.next:
         ss = cur.next
@@ -34,7 +36,8 @@ def reverse_linked_list1(head):
         ss.next = pre.next
         pre.next = ss
 
-    return dumpy.next
+    # return dumpy.next
+    return pre.next
 
 
 if __name__ == '__main__':
@@ -48,5 +51,5 @@ if __name__ == '__main__':
     node3.next = None
 
     print(show_list_node(head))
-    head = reverse_linked_list1(head)
+    head = reverse_linked_list(head)
     print(show_list_node(head))
