@@ -4,16 +4,18 @@
 
 def longest_valid_parentheses(s):
     """
-    给定一个只包含'('和')'的字符串，查找出有效括号字符串的最大长度
+    给定一个只包含'('和')'的字符串，查找出有效括号字符串的最大连续长度
     :param s: str
     :return: int
     """
     res = 0
     s = ')' + s
-    dp = [0] * len(s)  # dp的每一个位置上的值表示截止到当前位置，有效括号的最大长度
+    # dp的每一个位置上的值表示截止到当前位置，有效括号的最大长度，
+    # 但是如果dp的当前位置不属于有效括号的范围内，则对应的dp位置值等于0
+    dp = [0] * len(s)
     for i in range(1, len(s)):
         if s[i] == ')':
-            if s[i - 1 - dp[i - 1]] == '(':
+            if s[i - 1 - dp[i - 1]] == '(':  # '())((()))('
                 dp[i] = dp[i - 1] + 2
             dp[i] += dp[i - dp[i]]
         res = max(res, dp[i])
@@ -23,7 +25,7 @@ def longest_valid_parentheses(s):
 def longest_valid_parentheses1(s):
     stack = [-1]
     res = 0
-    for i in range(len(s)):
+    for i in range(len(s)):  # '())((()))('
         if s[i] == '(':
             stack.append(i)
         else:
@@ -66,4 +68,4 @@ if __name__ == "__main__":
     s = '())((()))('
     s1 = '(()'
     print(longest_valid_parentheses2(s1))
-
+    # print(longest_valid_parentheses(s))

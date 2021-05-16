@@ -12,8 +12,8 @@ def reverse_nodes_in_k_group(head, k):
     :return: ListNode
     """
     def reverse_link_list(pre, next):
-        last = pre.next
-        cur = last.next
+        last = pre.next  # last表示已完成反转的序列中最后一个node
+        cur = last.next  # cur表示即将参与反转的node，肯定是last的下一个node
         while cur != next:
             last.next = cur.next
             cur.next = pre.next
@@ -43,6 +43,8 @@ def reverse_nodes_in_k_group(head, k):
     while cur:
         index += 1
         if index % k == 0:
+            # 以这k个node的开始node的前一个node和结尾node的下一个node来做执行反转操作，
+            # 并返回已反转薛列中的最后一个node
             pre = reverse_link_list1(pre, cur.next)
             cur = pre.next
         else:
