@@ -9,7 +9,7 @@ def direct_insert_sort(nums):
     if not nums or len(nums) == 1:
         return nums
     for i in range(1, len(nums)):
-        index = i
+        index = i                                                                                                                                                       
         for j in reversed(range(0, i)):
             if nums[index] < nums[j]:
                 nums[index] = nums[index] ^ nums[j]
