@@ -23,40 +23,42 @@ def fast_sort(numbers, low, high):
     fast_sort(numbers, low, split_index - 1)
     fast_sort(numbers, split_index + 1, high)
 
+def fast_sort1(numbers, low, high):
     # 算法2
-    # if low >= high:
-    #     return
-    # pivot = numbers[low]
-    # start, end = low, high
-    # while start < end:
-    #     while start < end and numbers[end] >= pivot:
-    #         end -= 1
-    #     numbers[start] = numbers[end]
-    #     while start < end and numbers[start] <= pivot:
-    #         start += 1
-    #     numbers[end] = numbers[start]
-    # numbers[start] = pivot
-    #
-    # fast_sort(numbers, low, start - 1)
-    # fast_sort(numbers, start + 1, high)
+    if low >= high:
+        return
+    pivot = numbers[low]
+    start, end = low, high
+    while start < end:
+        while start < end and numbers[end] >= pivot:
+            end -= 1
+        numbers[start] = numbers[end]
+        while start < end and numbers[start] <= pivot:
+            start += 1
+        numbers[end] = numbers[start]
+    numbers[start] = pivot
+    
+    fast_sort1(numbers, low, start - 1)
+    fast_sort2(numbers, start + 1, high)
 
+def fast_sort2(numbers, low, high):
     # 算法3
-    # if low >= high:
-    #     return
-    # pivot = numbers[low]
-    # start, end = low, high
-    # while start < end:
-    #     while start < end and numbers[end] >= pivot:
-    #         end -= 1
-    #     while start < end and numbers[start] <= pivot:
-    #         start += 1
-    #     if start < end:
-    #         numbers[start], numbers[end] = numbers[end], numbers[start]
-    # numbers[low] = numbers[start]
-    # numbers[start] = pivot
+    if low >= high:
+        return
+    pivot = numbers[low]
+    start, end = low, high
+    while start < end:
+        while start < end and numbers[end] >= pivot:
+            end -= 1
+        while start < end and numbers[start] <= pivot:
+            start += 1
+        if start < end:
+            numbers[start], numbers[end] = numbers[end], numbers[start]
+    numbers[low] = numbers[start]
+    numbers[start] = pivot
 
-    # fast_sort(numbers, low, start-1)
-    # fast_sort(numbers, start + 1, high)
+    fast_sort2(numbers, low, start-1)
+    fast_sort2(numbers, start + 1, high)
 
 
 if __name__ == "__main__":
@@ -66,7 +68,7 @@ if __name__ == "__main__":
         old += " "
         old += str(number)
     print(old)
-    fast_sort(nums, 0, len(nums)-1)
+    fast_sort2(nums, 0, len(nums)-1)
     new = ""
     for number in nums:
         new += " "
