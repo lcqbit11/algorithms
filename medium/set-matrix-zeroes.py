@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from lib.printMatrix import print_matrix
+from utils.printMatrix import print_matrix
 
 
 def set_matrix_zeroes(matrix):

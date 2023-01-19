@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from lib.trieNode import TrieNode
+from utils.trieNode import TrieNode
 
 
 class Trie(object):

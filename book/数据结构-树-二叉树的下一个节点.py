@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*_ coding:utf-8 -*-
 
-from lib.treeNodeP import TreeNodeP
+from utils.treeNodeP import TreeNodeP
 
 def tree_node_next(root, node):
     """

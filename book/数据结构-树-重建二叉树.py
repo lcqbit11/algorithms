@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from lib.treeNode import TreeNode
+from utils.treeNode import TreeNode
 
 def before_middle_construct_tree(before_seq, middle_seq):
     """

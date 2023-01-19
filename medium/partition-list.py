@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from lib.listNode import ListNode, show_list_node
+from utils.listNode import ListNode, show_list_node
 
 
 def partition_list(head, x):

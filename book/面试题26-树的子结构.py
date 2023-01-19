@@ -1,6 +1,6 @@
 #!/usr/bin/emv python
 # -*- coding: utf-8 -*-
-from lib.treeNode import TreeNode
+from utils.treeNode import TreeNode
 
 
 def has_sub_tree(root1, root2):

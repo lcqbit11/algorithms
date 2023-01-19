@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from lib.listNode import ListNode
+from utils.listNode import ListNode
 
 
 def add_two_numbers(l1, l2):
