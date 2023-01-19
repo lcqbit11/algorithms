@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-from lib.listNode import ListNode
+from utils.listNode import ListNode
 
 def linked_list_every_k_reverse(head):
     """

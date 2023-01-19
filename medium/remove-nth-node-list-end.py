@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from lib.listNode import ListNode, show_list_node
+from utils.listNode import ListNode, show_list_node
 
 
 def remove_nth_node_from_list_end(head, n):

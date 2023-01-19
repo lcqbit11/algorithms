@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from lib.treeNode import TreeNode
+from utils.treeNode import TreeNode
 
 
 def two_sum_iv_input_bst(root, k):

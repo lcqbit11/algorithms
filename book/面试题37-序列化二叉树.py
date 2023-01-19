@@ -3,7 +3,7 @@
 import sys,os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # __file__获取执行文件相对路径，整行为取上一级的上一级目录
 sys.path.append(BASE_DIR)
-from lib.treeNode import TreeNode, layer_traverse
+from utils.treeNode import TreeNode, layer_traverse
 
 """
 参考：https://www.cnblogs.com/ansang/p/11907595.html

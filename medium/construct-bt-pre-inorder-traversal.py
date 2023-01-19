@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from lib.treeNode import TreeNode, layer_traverse
+from utils.treeNode import TreeNode, layer_traverse
 
 
 def construct_bt_preorder_inorder_traversal(preorder, inorder):

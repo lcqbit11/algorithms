@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from lib.treeNode import TreeNode
+from utils.treeNode import TreeNode
 
 
 def lowest_common_ancestor_binary_tree(root, p, q):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from lib.treeNode import TreeNode
+from utils.treeNode import TreeNode
 
 
 def maximum_depth_binary_tree(root):

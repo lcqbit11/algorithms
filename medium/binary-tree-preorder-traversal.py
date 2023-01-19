@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from lib.treeNode import TreeNode
+from utils.treeNode import TreeNode
 
 
 def binary_tree_pre_order_traversal2(root):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf -*-
-from util.listNode import ListNode, generate_node_list, show_list_node
+from utils.listNode import ListNode, generate_node_list, show_list_node
 
 
 ##

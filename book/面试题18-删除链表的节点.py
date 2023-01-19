@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from lib.listNode import ListNode
+from utils.listNode import ListNode
 
 def delete_node(head, node):
     """
