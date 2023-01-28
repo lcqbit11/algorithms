@@ -43,4 +43,4 @@ def generate_node_list(nums):
 
         return dump.next
     except:
-         logging.error("Not valid input node list: " + nums)
+         logging.error("Not valid input node list: " + str(nums))
