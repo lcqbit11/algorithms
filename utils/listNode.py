@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import logging
 
 
 # Definition for singly-linked list.
@@ -30,14 +31,16 @@ def show_list_node(head):
 
 
 def generate_node_list(nums):
-    if not nums:
-        return ListNode(-1)
+    try:
+    # if not nums:
+    #     return ListNode(-1)
+        dump = ListNode(-1)
+        res = dump
+        for item in nums:
+            node = ListNode(item)
+            res.next = node
+            res = res.next
 
-    dump = ListNode(-1)
-    res = dump
-    for item in nums:
-        node = ListNode(item)
-        res.next = node
-        res = res.next
-
-    return dump.next
+        return dump.next
+    except:
+         logging.error("Not valid input node list: " + str(nums))
