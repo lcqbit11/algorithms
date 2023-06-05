@@ -25,6 +25,18 @@ def two_sum(nums, target):
             return [i, d[num2]]
 
 
+def two_sum_2(nums, target):
+    d = dict()
+    for i, n in enumerate(nums):
+        tmp = target - n
+        if tmp in d:
+            return [d[tmp], i]
+        else:
+            d[n] = i
+
+    return [-1, -1]
+
+
 if __name__ == "__main__":
     # nums = [2, 7, 11, 15]
     # target = 9

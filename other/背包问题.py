@@ -27,7 +27,7 @@ def carry_bag(T, weights, values):
     num = len(weights)
     dp = [[0] * (T + 1) for _ in range(num+1)]
     # 第1个物品为weights[0],values[0],,,第i个物品为weights[i-1],values[-1]
-    # 第1个物品在容量j喜爱的最优解为dp[1][j],,,第i个物品在容量j喜爱的最优解为dp[i][j]
+    # 第1个物品在容量j时候的最优解为dp[1][j],,,第i个物品在容量j时候的最优解为dp[i][j]
     for i in range(1, num+1):  # i 表示第i个物品
         for j in reversed(range(1, T+1)):  # j 表示背包总的容量大小（即T的大小）。j 是指背包总的容量，包括已经占用的容量和未占用的容量
                                            # j 不是指背包当前剩余的空间容量大小。

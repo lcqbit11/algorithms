@@ -19,8 +19,10 @@ def delete_tail(stack1, stack2):
     :return: void
     """
     while stack2:
-        print(stack2[-1])
-        del stack2[-1]
+        tmp = stack2.pop()
+        print(tmp)
+        # print(stack2[-1])
+        # del stack2[-1]
 
 if __name__ == "__main__":
     stack1 = [1, 2, 3]
